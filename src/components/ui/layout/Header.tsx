@@ -1,25 +1,15 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import useGlobalStyles from '../../styles/useGlobalStyles';
+// import clsx from 'clsx';
+import LocDropdown from '../forms/LocDropdown';
+import { StyledHeader, StyledTitle } from './header-style';
 
-const headerStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    padding: 16,
-  }
-}));
-
-const Header = () => {
-
-  const classes = headerStyles();
-  const globalClasses = useGlobalStyles();
-
+const Header = (props: any) => {
+  const { country, countries, setCountry } = props;
   return (
-    <div className={classes.root}>
-      <Typography variant="h6" className={globalClasses.title}>COVID-19 Tracker</Typography>
-    </div>
+    <StyledHeader>
+      <StyledTitle variant="h6">COVID-19 Tracker</StyledTitle>
+      <LocDropdown country={country} countries={countries} setCountry={setCountry} />
+    </StyledHeader>
   );
 }
 

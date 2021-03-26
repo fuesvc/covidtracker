@@ -12,7 +12,7 @@ const Fink = (props: any) => {
   
     },
     link: {
-      fontFamily: "IBM Plex Mono",
+      fontFamily: "IBM Plex Mono, monospace",
       textTransform: 'uppercase',
       fontSize: '14px',
       fontWeight: 700,
