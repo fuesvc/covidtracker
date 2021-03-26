@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# covidtracker
+
+### by FuesVC™
+
+<p>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://github.com/fuesvc/covidtracker/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="ExamIQ: This project is released under the MIT license." />
+  </a>
+</p>
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
