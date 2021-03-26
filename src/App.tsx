@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import useGlobalStyles from './components/styles/useGlobalStyles';
 import TopNav from './components/ui/TopNav';
+import Header from './components/ui/layout/Header';
 
 function App() {
+  const globalClasses = useGlobalStyles();
   return (
-    <div className="App">
+    <div className={globalClasses.rootApp}>
       <TopNav />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
     </div>
   );
 }

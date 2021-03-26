@@ -18,7 +18,6 @@ export default function TopNav(props: any) {
 
   const useStyles = makeStyles(theme => ({
     root: {
-      flexGrow: 1,
     },
     bar: {
       backgroundColor: lightMode?'#f1f1f1':'#222222',
