@@ -39,7 +39,7 @@ function App() {
   }, []);
 
   const onCountryChange = async (e: any) => {
-    const countryCode = e.target.value;
+    // const countryCode = e.target.value;
     setCountry(e.target.value);
   }
 
