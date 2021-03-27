@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import numeral from 'numeral';
 
 export const sortData = (data: any) => {
@@ -13,3 +13,9 @@ export const sortData = (data: any) => {
 }
 
 export const prettyPrintStat = (stat: any) => stat ? `+${numeral(stat).format("0.000a")}` : "+0";
+
+export const showDataOnMap = (data: any, casesType="cases") => {
+  data.map((country: any) => (
+    <div id="circle"></div>
+  ));
+}

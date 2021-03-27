@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Theme from '../../styles/theme';
 
 export const StyledHeader = styled.div`
-  padding: 24px;
+  padding: 0 24px;
   height: 20vh;
   padding-top: 100px;
   display: flex;
@@ -17,7 +17,8 @@ export const StyledTitle = styled(Typography)`
 `;
 
 export const StyledStats = styled.div`
-  padding: 24px;
+  padding: 0 24px;
+  width: 100%;
   height: 20vh;
-  padding-top: 112px;
+  padding-top: 124px;
 `;

@@ -7,6 +7,7 @@ import Header from './components/ui/layout/Header';
 import CaseStatsCard from './components/ui/layout/CaseStatsCard';
 import InfoBox from './components/ui/forms/InfoBox';
 import { prettyPrintStat } from './util/util';
+import MapB from './components/ui/MapB';
 
 function App() {
   const [country, setCountry] = useState('worldwide');
@@ -20,6 +21,10 @@ function App() {
   });
   const [countries, setCountries] = useState([]);
   const [tableData, setTableData] = useState([]);
+  const [casesType, setCasesType] = useState("cases");
+  const [mapCountries, setMapCountries] = useState([]); //[-74.5, 40]
+  const [mapCenter, setMapCenter] = useState([-97.5684, 39.6105]);
+  const [mapZoom, setMapZoom] = useState(3.68);
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -47,7 +52,11 @@ function App() {
             return 0;
           });;
           setCountries(countries);
+          setMapCountries(data);
           setTableData(sortedData);
+          setMapCenter([-97.5684, 39.6105]);
+          setMapZoom(3.68);
+          setCasesType('cases');
         })
     };
 
@@ -101,8 +110,14 @@ function App() {
               total={prettyPrintStat(countryInfo.deaths)}
             />
           </div>
+          <MapB
+            countries={mapCountries}
+            casesType={casesType}
+            center={mapCenter}
+            zoom={mapZoom}
+          />
         </Grid>
-        <Grid item>
+        <Grid item sm={6}>
           <CaseStatsCard countries={tableData} />
         </Grid>
       </Grid>

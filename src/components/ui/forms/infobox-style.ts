@@ -6,7 +6,7 @@ import Theme from '../../styles/theme';
 
 export const StyledCard = styled(Card)`
   background-color: ${Theme.layout.dark1Gray};
-  min-width: 144px;
+  width: 100%;
   margin: 24px 12px;
   &:hover {
     cursor: pointer;
