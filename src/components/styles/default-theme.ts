@@ -10,6 +10,8 @@ export interface DefaultTheme {
     light2Gray: string;
     light1Gray: string;
     light0Gray: string;
+    alertRed: string;
+    successGreen: string;
   };
   fonts: {
     base: string;

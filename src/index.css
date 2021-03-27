@@ -19,3 +19,9 @@ code {
   width: 100%;
   min-height: 100vh;
 }
+
+.infoBoxes {
+  display: flex;
+  flex-direction: row;
+  padding: 0 24px;
+}

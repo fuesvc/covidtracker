@@ -19,6 +19,5 @@ export const StyledTitle = styled(Typography)`
 export const StyledStats = styled.div`
   padding: 24px;
   height: 20vh;
-  padding-top: 100px;
-  flex: 1;
+  padding-top: 112px;
 `;

@@ -4,6 +4,7 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import { StyledTablePaper, StyledTable, StyledTableHead, StyledTableCell } from './casetable-style';
+import { prettyPrintStat } from '../../../util/util';
 
 const CaseTable = (props: any) => {
   const { countries } = props;
@@ -21,7 +22,7 @@ const CaseTable = (props: any) => {
             {countries.map((country: any) => (
               <TableRow>
                 <StyledTableCell>{country.country}</StyledTableCell>
-                <StyledTableCell align="right"><strong>{country.cases}</strong></StyledTableCell>
+                <StyledTableCell align="right" className={'alert'}><strong>{prettyPrintStat(country.cases)}</strong></StyledTableCell>
               </TableRow>
             ))}
           </TableBody>

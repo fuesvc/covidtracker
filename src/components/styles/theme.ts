@@ -11,7 +11,9 @@ const Theme: DefaultTheme = {
     dark0Gray: '#AAAAAA',
     light2Gray: '#D9D9D9',
     light1Gray: '#F6F6F6',
-    light0Gray: '#FFFFFF'
+    light0Gray: '#FFFFFF',
+    alertRed: '#FF0000',
+    successGreen: '#34BF49'
   },
   breakpoints: {
     xs: `425px`,

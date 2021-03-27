@@ -5,8 +5,8 @@ import TableCell from '@material-ui/core/TableCell';
 import Theme from '../../styles/theme';
 
 export const StyledTablePaper = styled(Paper)`
-  margin-top: 24px;
-  min-width: 40vw;
+  margin-top: 48px;
+  min-width: 45vw;
   background-color: ${Theme.layout.dark1Gray};
   color: ${Theme.layout.light0Gray};
 `;
@@ -26,4 +26,7 @@ export const StyledTableHead = styled(TableHead)`
 export const StyledTableCell = styled(TableCell)`
   color: ${Theme.layout.light0Gray};
   font: 15px ${Theme.fonts.base};
+  &.alert {
+    color: ${Theme.layout.alertRed};
+  }
 `;
