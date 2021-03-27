@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyledMapContainer } from './style/map-style';
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from '!mapbox-gl';
 
 const Map = (props: any) => {
   // const { countries, casesType, center, zoom } = props;

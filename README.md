@@ -3,6 +3,9 @@
 ### by FuesVC™
 
 <p>
+  <a href="https://app.netlify.com/sites/laughing-jepsen-22b897/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/72794b5a-955d-4806-a36a-47189fb8d3ea/deploy-status" alt="netlify build status" />
+  </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   <a href="https://github.com/fuesvc/covidtracker/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="ExamIQ: This project is released under the MIT license." />
