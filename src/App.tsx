@@ -5,12 +5,14 @@ import GlobalStyle from './components/styles/global-style';
 import TopNav from './components/ui/TopNav';
 import Header from './components/ui/layout/Header';
 import CaseStatsCard from './components/ui/layout/CaseStatsCard';
+import CaseLineGraph from './components/ui/layout/CaseLineGraph';
 import InfoBox from './components/ui/forms/InfoBox';
 import { prettyPrintStat } from './util/util';
 import MapB from './components/ui/MapB';
 
 function App() {
   const [country, setCountry] = useState('worldwide');
+  const [countryName, setCountryName] = useState('Worldwide');
   const [countryInfo, setCountryInfo] = useState({
     todayCases: null,
     cases: null,
@@ -24,7 +26,7 @@ function App() {
   const [casesType, setCasesType] = useState("cases");
   const [mapCountries, setMapCountries] = useState([]); //[-74.5, 40]
   const [mapCenter, setMapCenter] = useState([-97.5684, 39.6105]);
-  const [mapZoom, setMapZoom] = useState(3.68);
+  const [mapZoom, setMapZoom] = useState(0);
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -55,7 +57,7 @@ function App() {
           setMapCountries(data);
           setTableData(sortedData);
           setMapCenter([-97.5684, 39.6105]);
-          setMapZoom(3.68);
+          setMapZoom(2.39);
           setCasesType('cases');
         })
     };
@@ -73,7 +75,9 @@ function App() {
     await fetch(url)
       .then(response => response.json())
       .then((data) => {
+        console.log(data);
         setCountry(countryCode);
+        setCountryName(countryCode.charAt(0).toUpperCase() + countryCode.slice(1));
         setCountryInfo(data);
       });
   }
@@ -82,7 +86,7 @@ function App() {
     <div className="rootApp">
       <GlobalStyle />
       <TopNav />
-      <Grid container>
+      <Grid container className="mainApp">
         <Grid item sm={6}>
           <Header country={country} countries={countries} setCountry={onCountryChange} />
           <div className="infoBoxes">
@@ -117,8 +121,13 @@ function App() {
             zoom={mapZoom}
           />
         </Grid>
-        <Grid item sm={6}>
+        <Grid
+          item 
+          sm={6}
+          className={'caseStats'}
+        >
           <CaseStatsCard countries={tableData} />
+          <CaseLineGraph country={countryName} casesType={casesType} />
         </Grid>
       </Grid>
     </div>

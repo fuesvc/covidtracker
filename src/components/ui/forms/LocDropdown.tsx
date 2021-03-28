@@ -7,7 +7,6 @@ const LocDropdown = (props: any) => {
   return (
     <FormControl>
       <StyledSelect
-        variant="outlined"
         value={country}
         onChange={(e: any) => { setCountry(e) }}
       >
