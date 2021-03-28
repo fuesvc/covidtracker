@@ -9,7 +9,7 @@ const Map = (props: any) => {
     mapboxgl.accessToken = 'pk.eyJ1IjoibmF2YWxtIiwiYSI6ImNrbXM2NTAxbDBlbmcyeHJzMHdleHcxcWIifQ.w-SIf2Zea-ok8B0KJMJRJw';
     var map = new mapboxgl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/navalm/ckms7h0dq2gpo17nxsc7gn7ut',
+        style: 'mapbox://styles/navalm/ckmso2ipg06bt17pchqo2tcjk',
         center: center, // starting position
         zoom: zoom // starting zoom
     });
