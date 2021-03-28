@@ -13,6 +13,7 @@ const Map = (props: any) => {
         center: center, // starting position
         zoom: zoom // starting zoom
     });
+    map.resize();
     map.addControl(new mapboxgl.NavigationControl());
     map.on('move', () => {
       console.log(map.getCenter().lng.toFixed(4));
